@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/relatif">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/txtangka1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:id="@+id/txtangka2"
+        android:layout_below="@+id/txtangka1"
+        android:layout_marginTop="56dp"
+        android:layout_alignRight="@+id/txtangka1"
+        android:layout_alignEnd="@+id/txtangka1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/lblHasil"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/txtangka2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/txtangka2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kurang"
+        android:id="@+id/btnKurang"
+        android:checked="false"
+        android:layout_alignTop="@+id/btnTambah"
+        android:layout_toRightOf="@+id/lblHasil"
+        android:layout_toEndOf="@+id/lblHasil"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tambah"
+            android:id="@+id/btnTambah"
+            android:checked="false"
+            android:layout_below="@+id/txtangka1"
+            android:layout_alignRight="@+id/tombolHasil"
+            android:layout_alignEnd="@+id/tombolHasil"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kali"
+        android:id="@+id/btnKali"
+        android:checked="false"
+        android:layout_below="@+id/txtangka1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+            android:onClick="onRadioButtonClicked"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bagi"
+        android:id="@+id/btnBagi"
+        android:checked="false"
+        android:layout_alignTop="@+id/btnKurang"
+        android:layout_toLeftOf="@+id/btnKurang"
+        android:layout_toStartOf="@+id/btnKurang"
+        android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+</RelativeLayout>
